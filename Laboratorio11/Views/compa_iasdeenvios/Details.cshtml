@@ -1,0 +1,35 @@
+﻿@model Laboratorio11.Models.compa_iasdeenvios
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>compa_iasdeenvios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCompa_ia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCompa_ia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCompa_iaEnvios }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

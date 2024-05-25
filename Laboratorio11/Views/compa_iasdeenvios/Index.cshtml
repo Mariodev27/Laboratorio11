@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Laboratorio11.Models.compa_iasdeenvios>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreCompa_ia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreCompa_ia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCompa_iaEnvios }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCompa_iaEnvios }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCompa_iaEnvios })
+        </td>
+    </tr>
+}
+
+</table>
